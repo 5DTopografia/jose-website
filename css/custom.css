@@ -107,3 +107,44 @@
       display: block;
     }
   }
+
+  /* FOOTER */
+
+  .site-footer {
+    padding: 32px 0;
+    text-align: center;
+  }
+  
+  .footer-inner {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+
+  .footer-icon {
+    width: 48px;
+    height: 48px;
+    background: #ffd44d;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, background 0.2s ease;
+  }
+  
+  .footer-icon img {
+    width: 22px;
+    height: 22px;
+    filter: invert(32%) sepia(35%) saturate(1200%) hue-rotate(160deg);
+    transition: filter 0.2s ease;
+  }
+  
+  .footer-icon:hover {
+    transform: translateY(-2px);
+    background: #ffcc33;
+  }
+  
+  .footer-icon:hover img {
+    filter: invert(15%) sepia(40%) saturate(1600%) hue-rotate(160deg);
+  }
