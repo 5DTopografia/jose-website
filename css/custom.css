@@ -1,53 +1,71 @@
 /* =====================
-   Global reset & base
+   DESIGN TOKENS
    ===================== */
 
-   *,
-   *::before,
-   *::after {
-     box-sizing: border-box;
-   }
-   
-   html {
-     scroll-behavior: smooth;
-   }
-   
-   body {
-     margin: 0;
-     font-family: system-ui, -apple-system, BlinkMacSystemFont,
-                  "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-     color: #0f172a; /* dark */
-     background-color: #ffffff;
-     line-height: 1.5;
-   }
-   
-   img {
-     max-width: 100%;
-     display: block;
-   }
-   
-   a {
-     color: inherit;
-     text-decoration: none;
-   }
-   
-   ul {
-     padding: 0;
-     margin: 0;
-     list-style: none;
-   }
-   
-   button {
-     font-family: inherit;
-     cursor: pointer;
-   }
-
- /* HEADER BASE */
-.site-header {
+   :root {
+    --color-yellow: #ffd44d;
+    --color-yellow-hover: #ffcc33;
+    --color-blue: #2f8faa;
+    --color-blue-dark: #0b2b35;
+  
+    --color-text: #0f172a;
+    --color-white: #ffffff;
+    --color-grey-light: #f2f2f2;
+  }
+  
+  /* =====================
+     Global reset & base
+     ===================== */
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                 "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--color-text);
+    background-color: var(--color-white);
+    line-height: 1.5;
+  }
+  
+  img {
+    max-width: 100%;
+    display: block;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  button {
+    font-family: inherit;
+    cursor: pointer;
+  }
+  
+  /* =====================
+     HEADER
+     ===================== */
+  
+  .site-header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: #2f8faa;
+    background: var(--color-blue);
   }
   
   .header-inner {
@@ -63,12 +81,10 @@
   .main-nav ul {
     display: flex;
     gap: 24px;
-    list-style: none;
   }
   
   .main-nav a {
-    color: #ffd44d;
-    text-decoration: none;
+    color: var(--color-yellow);
     font-weight: 500;
   }
   
@@ -77,18 +93,54 @@
     background: none;
     border: none;
     font-size: 24px;
-    color: #ffd44d;
-    cursor: pointer;
+    color: var(--color-yellow);
   }
   
-  /* MOBILE MENU */
+  /* =====================
+     LANGUAGE SWITCH
+     ===================== */
+  
+  .lang-switch {
+    display: flex;
+    align-items: center;
+    background: var(--color-yellow);
+    border-radius: 999px;
+    padding: 4px;
+    gap: 4px;
+  }
+  
+  .lang-btn {
+    border: none;
+    background: transparent;
+    color: var(--color-blue);
+    font-weight: 600;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  
+  .lang-btn:hover {
+    background: rgba(47, 143, 170, 0.15);
+  }
+  
+  .lang-btn.active {
+    background: var(--color-blue);
+    color: var(--color-white);
+  }
+  
+  /* =====================
+     MOBILE MENU
+     ===================== */
+  
   @media (max-width: 768px) {
     .main-nav {
       position: absolute;
       top: 100%;
       left: 0;
       width: 100%;
-      background: #2f8faa;
+      background: var(--color-blue);
       display: none;
       padding: 24px 0;
     }
@@ -107,9 +159,11 @@
       display: block;
     }
   }
-
-  /* FOOTER */
-
+  
+  /* =====================
+     FOOTER
+     ===================== */
+  
   .site-footer {
     padding: 32px 0;
     text-align: center;
@@ -121,11 +175,11 @@
     justify-content: center;
     margin-bottom: 12px;
   }
-
+  
   .footer-icon {
     width: 48px;
     height: 48px;
-    background: #ffd44d;
+    background: var(--color-yellow);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -142,15 +196,17 @@
   
   .footer-icon:hover {
     transform: translateY(-2px);
-    background: #ffcc33;
+    background: var(--color-yellow-hover);
   }
   
   .footer-icon:hover img {
     filter: invert(15%) sepia(40%) saturate(1600%) hue-rotate(160deg);
   }
-
-  /* SERVICES */
-
+  
+  /* =====================
+     SERVICES
+     ===================== */
+  
   .services-inner {
     max-width: 1200px;
     margin: 0 auto;
@@ -170,10 +226,9 @@
   }
   
   .service-card {
-    background: #ffffff;
+    background: var(--color-white);
     border-radius: 12px;
     overflow: hidden;
-    cursor: pointer;
     transition: transform 0.2s ease;
   }
   
@@ -190,7 +245,7 @@
   .service-card-content {
     padding: 20px;
   }
-
+  
   .service-description {
     display: none;
     margin-top: 12px;
@@ -202,22 +257,35 @@
     display: block;
   }
   
-  /* Desktop: button visible, no auto expand */
-  @media (min-width: 769px) {
-    .service-toggle {
-      margin-top: 16px;
-    }
+  /* PRIMARY SERVICE BUTTON */
+  
+  .service-toggle {
+    margin-top: 16px;
+    padding: 8px 14px;
+    background: var(--color-yellow);
+    color: var(--color-blue);
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s ease, background 0.15s ease;
   }
   
-  /* Mobile: accordion feel */
+  .service-toggle:hover {
+    background: var(--color-yellow-hover);
+    transform: translateY(-1px);
+  }
+  
   @media (max-width: 768px) {
     .service-toggle {
       width: 100%;
-      margin-top: 12px;
     }
   }
-
-  /* PROJECTS */
+  
+  /* =====================
+     PROJECTS
+     ===================== */
+  
   .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -225,7 +293,7 @@
   }
   
   .project-card {
-    background: white;
+    background: var(--color-white);
     border-radius: 8px;
     overflow: hidden;
   }
@@ -245,65 +313,69 @@
     opacity: 0.7;
   }
   
-  /* Mobile */
   @media (max-width: 768px) {
     .projects-grid {
       grid-template-columns: 1fr;
     }
   }
-
+  
+  /* =====================
+     PROJECT FILTERS
+     ===================== */
+  
   .project-filters {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin: 24px 0;
-}
-
-.filter-btn {
-  padding: 10px 14px;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 212, 77, 0.6);
-  background: transparent;
-  color: #ffd44d;
-  cursor: pointer;
-}
-
-.filter-btn.is-active {
-  background: #ffd44d;
-  color: #0b2b35;
-}
-
-.project-filters-mobile {
-  display: none;
-  margin: 16px 0 24px;
-  padding: 10px 12px;
-  border-radius: 10px;
-}
-
-@media (max-width: 768px) {
-  .project-filters {
-    display: none;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 24px 0;
   }
+  
+  .filter-btn {
+    padding: 10px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 212, 77, 0.6);
+    background: transparent;
+    color: var(--color-yellow);
+    cursor: pointer;
+  }
+  
+  .filter-btn.is-active {
+    background: var(--color-yellow);
+    color: var(--color-blue-dark);
+  }
+  
   .project-filters-mobile {
-    display: block;
+    display: none;
+    margin: 16px 0 24px;
+    padding: 10px 12px;
+    border-radius: 10px;
   }
-}
-
-/* ===== Image containers ===== */
-
-.project-image,
-.service-image {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9; /* lock ratio */
-  overflow: hidden;
-  background: #f2f2f2;
-}
-
-.project-image img,
-.service-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;   /* crop, don’t stretch */
-  display: block;
-}
+  
+  @media (max-width: 768px) {
+    .project-filters {
+      display: none;
+    }
+    .project-filters-mobile {
+      display: block;
+    }
+  }
+  
+  /* =====================
+     IMAGE CONTAINERS
+     ===================== */
+  
+  .project-image,
+  .service-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: var(--color-grey-light);
+  }
+  
+  .project-image img,
+  .service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
