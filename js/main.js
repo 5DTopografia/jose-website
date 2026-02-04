@@ -3,6 +3,8 @@ import { initFilters } from "./core/filters.js";
 import { initLanguage } from "./core/language.js";
 import { renderServices } from "./ui/services.js";
 import { initServiceInteractions } from "./ui/services-interactions.js";
+import { renderProjects } from "./ui/projects.js";
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -11,5 +13,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initLanguage();
   renderServices("es");
   initServiceInteractions();
-
+  renderProjects();
 });
