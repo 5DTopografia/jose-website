@@ -4,7 +4,7 @@ import { initLanguage } from "./core/language.js";
 import { renderServices } from "./ui/services.js";
 import { initServiceInteractions } from "./ui/services-interactions.js";
 import { renderProjects } from "./ui/projects.js";
-
+import { initProjectFilters } from "./ui/filters-ui.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -14,4 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
   renderServices("es");
   initServiceInteractions();
   renderProjects();
+  initProjectFilters();
+
 });

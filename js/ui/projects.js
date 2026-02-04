@@ -1,12 +1,12 @@
 import { projects } from "../data/project.js";
 
-export function renderProjects() {
+export function renderProjects(list = projects) {
   const grid = document.getElementById("projectsGrid");
   if (!grid) return;
 
   grid.innerHTML = "";
 
-  const visibleProjects = projects
+  const visibleProjects = list
     .filter(p => p.visible)
     .sort((a, b) => new Date(b.date) - new Date(a.date));
 

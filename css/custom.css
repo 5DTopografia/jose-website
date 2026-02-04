@@ -251,3 +251,40 @@
       grid-template-columns: 1fr;
     }
   }
+
+  .project-filters {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 24px 0;
+}
+
+.filter-btn {
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 212, 77, 0.6);
+  background: transparent;
+  color: #ffd44d;
+  cursor: pointer;
+}
+
+.filter-btn.is-active {
+  background: #ffd44d;
+  color: #0b2b35;
+}
+
+.project-filters-mobile {
+  display: none;
+  margin: 16px 0 24px;
+  padding: 10px 12px;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .project-filters {
+    display: none;
+  }
+  .project-filters-mobile {
+    display: block;
+  }
+}
