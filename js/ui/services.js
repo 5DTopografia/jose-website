@@ -1,4 +1,5 @@
 import { services } from "../data/services.js";
+import { applyImageFallbacks } from "./image-fallback.js";
 
 export function renderServices(lang = "es") {
   const grid = document.getElementById("servicesGrid");
@@ -21,4 +22,6 @@ export function renderServices(lang = "es") {
       </div>
     </article>
   `).join("");
+
+  applyImageFallbacks(grid);
 }
