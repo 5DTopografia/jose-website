@@ -1,15 +1,15 @@
+const STORAGE_KEY = "site-lang";
+const DEFAULT_LANG = "es";
 
-let currentLang = "es";
-
-export function initLanguage() {
-  // Language UI is handled in ui/
-}
-
-// State helpers
 export function getLang() {
-  return currentLang;
+  return localStorage.getItem(STORAGE_KEY) || DEFAULT_LANG;
 }
 
 export function setLang(lang) {
-  currentLang = lang;
+  localStorage.setItem(STORAGE_KEY, lang);
+}
+
+export function initLanguage() {
+  const lang = getLang();
+  document.documentElement.lang = lang;
 }

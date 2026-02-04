@@ -5,16 +5,22 @@ import { renderServices } from "./ui/services.js";
 import { initServiceInteractions } from "./ui/services-interactions.js";
 import { renderProjects } from "./ui/projects.js";
 import { initProjectFilters } from "./ui/filters-ui.js";
-import { initLanguageToggle } from "./ui/language-toogle.js";
+import { initLanguageToggle } from "./ui/language-toggle.js";
+import { getLang } from "./core/language.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
+  initLanguage();
   initHeader();
   initFilters();
-  initLanguage();
+  
+
+  const lang = getLang();
+
   renderServices("es");
   initServiceInteractions();
-  renderProjects();
+
+  renderProjects(undefined, lang);
   initProjectFilters();
   initLanguageToggle();
 

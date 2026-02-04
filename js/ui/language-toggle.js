@@ -7,8 +7,8 @@ import { projects } from "../data/project.js";
 export function initLanguageToggle() {
   const btn = document.getElementById("langToggle");
   if (!btn) return;
-
   // Set initial label
+  document.documentElement.lang = getLang();
   btn.textContent = getLang().toUpperCase();
 
   btn.addEventListener("click", () => {
