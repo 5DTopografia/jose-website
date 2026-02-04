@@ -1,16 +1,16 @@
 import { projects } from "../data/project.js";
 
-export function renderProjects(list = projects) {
+export function renderProjects(list = projects, lang = "es") {
   const grid = document.getElementById("projectsGrid");
   if (!grid) return;
 
   grid.innerHTML = "";
 
   const visibleProjects = list
-    .filter(p => p.visible)
+    .filter((p) => p.visible)
     .sort((a, b) => new Date(b.date) - new Date(a.date));
 
-  visibleProjects.forEach(project => {
+  visibleProjects.forEach((project) => {
     const card = document.createElement("article");
     card.className = "project-card";
 
@@ -20,8 +20,8 @@ export function renderProjects(list = projects) {
       </div>
 
       <div class="project-content">
-        <h3>${project.title}</h3>
-        <p>${project.description}</p>
+        <h3>${project.title[lang] ?? project.title}</h3>
+        <p>${project.description[lang] ?? project.description}</p>
         <span class="project-date">
           ${formatDate(project.date)}
         </span>
