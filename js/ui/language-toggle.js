@@ -2,6 +2,7 @@ import { getLang, setLang } from "../core/language.js";
 import { renderServices } from "./services.js";
 import { renderProjects } from "./projects.js";
 import { initServiceInteractions } from "./services-interactions.js";
+import { initProjectFilters } from "./filters-ui.js";
 import { projects } from "../data/project.js";
 
 export function initLanguageToggle() {
@@ -23,6 +24,7 @@ export function initLanguageToggle() {
     // Re-render dynamic sections
     renderServices(lang);
     initServiceInteractions();
+    initProjectFilters(lang);
     renderProjects(projects, lang);
   }
 

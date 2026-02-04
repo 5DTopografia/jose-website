@@ -9,10 +9,7 @@ export const projects = [
       es: "Levantamiento topográfico con drones y BIM.",
       en: "Complete topographic survey with drones and BIM"
     },
-    serviceType: {
-      es: "Topografia",
-      en: "Topography"
-    },
+    serviceType: "topografia" ,
     date: "2025-01-18",
     image: "assets/images/projects/project-1.jpg",
     visible: true
