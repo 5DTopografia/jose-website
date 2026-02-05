@@ -8,6 +8,7 @@ import { initProjectFilters } from "./ui/filters-ui.js";
 import { initLanguageToggle } from "./ui/language-toggle.js";
 import { getLang } from "./core/language.js";
 import { renderHome } from "./ui/home.js";
+import { renderContact } from "./ui/contact.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -21,6 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   renderServices(lang);
   initServiceInteractions();
+
+  renderContact(lang);
 
   renderProjects(undefined, lang);
   initProjectFilters(lang);

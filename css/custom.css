@@ -399,9 +399,7 @@
     object-fit: cover;
   }
 
-  /* =====================
-   HOME
-   ===================== */
+  /* HOME */
 
 .hero {
   background: var(--color-blue);
@@ -614,3 +612,86 @@
   color: var(--color-blue);
   font-weight: 800;
 }
+
+/* CONTACT */
+
+   .contact-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 88px 32px;
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-inner {
+      padding: 64px 20px;
+    }
+  }
+  
+  .contact-intro {
+    max-width: 60ch;
+    margin: 0 auto 36px;
+    color: #334155;
+    font-size: 1.05rem;
+  }
+  
+  .contact-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-cards {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .contact-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 22px;
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  
+  .contact-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 36px rgba(15, 23, 42, 0.12);
+  }
+  
+  .contact-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #ffd44d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .contact-icon img {
+    width: 22px;
+    height: 22px;
+    filter: invert(32%) sepia(35%) saturate(1200%) hue-rotate(160deg);
+  }
+  
+  .contact-card-content {
+    text-align: left;
+  }
+  
+  .contact-label {
+    display: block;
+    font-size: 0.85rem;
+    color: #64748b;
+  }
+  
+  .contact-value {
+    color: #2f8faa;
+    font-weight: 800;
+    word-break: break-all;
+  }
