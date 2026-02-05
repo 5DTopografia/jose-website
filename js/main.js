@@ -19,11 +19,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const lang = getLang();
   renderHome(lang);
 
-  renderServices("es");
+  renderServices(lang);
   initServiceInteractions();
 
   renderProjects(undefined, lang);
-  initProjectFilters();
+  initProjectFilters(lang);
   initLanguageToggle();
 
 });
