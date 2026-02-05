@@ -7,6 +7,7 @@ import { renderProjects } from "./ui/projects.js";
 import { initProjectFilters } from "./ui/filters-ui.js";
 import { initLanguageToggle } from "./ui/language-toggle.js";
 import { getLang } from "./core/language.js";
+import { renderHome } from "./ui/home.js";
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -16,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
 
   const lang = getLang();
+  renderHome(lang);
 
   renderServices("es");
   initServiceInteractions();

@@ -4,6 +4,8 @@ import { renderProjects } from "./projects.js";
 import { initServiceInteractions } from "./services-interactions.js";
 import { initProjectFilters } from "./filters-ui.js";
 import { projects } from "../data/project.js";
+import { renderHome } from "./home.js";
+
 
 export function initLanguageToggle() {
   const switcher = document.getElementById("langSwitch");
@@ -26,6 +28,7 @@ export function initLanguageToggle() {
     initServiceInteractions();
     initProjectFilters(lang);
     renderProjects(projects, lang);
+    renderHome(lang);
   }
 
   // Initial state (on page load)
