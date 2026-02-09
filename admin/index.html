@@ -12,6 +12,11 @@
   <script src="https://unpkg.com/decap-cms@latest/dist/decap-cms.js"></script>
 </head>
 <body>
+
+    <!-- REQUIRED mount point -->
+    <div id="nc-root"></div>
+
+    <!-- Identity redirect logic -->
     <script>
         if (window.netlifyIdentity) {
           window.netlifyIdentity.on("init", user => {
