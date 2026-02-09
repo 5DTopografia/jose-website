@@ -1,5 +1,3 @@
-console.error("LANGUAGE TOGGLE FILE LOADED v2026-02-09");
-
 import { getLang, setLang } from "../core/language.js";
 import { renderServices } from "./services.js";
 import { renderProjects } from "./projects.js";
@@ -7,6 +5,7 @@ import { initServiceInteractions } from "./services-interactions.js";
 import { initProjectFilters } from "./filters-ui.js";
 import { renderHome } from "./home.js";
 
+console.error("🌍 LANGUAGE TOGGLE LOADED");
 
 export function initLanguageToggle(getProjects) {
   const switcher = document.getElementById("langSwitch");
@@ -24,23 +23,21 @@ export function initLanguageToggle(getProjects) {
       btn.setAttribute("aria-pressed", isActive);
     });
 
-    // Re-render dynamic sections
     renderServices(lang);
     initServiceInteractions();
 
     const projectsList =
-    typeof getProjects === "function" ? getProjects() : [];
+      typeof getProjects === "function" ? getProjects() : [];
 
-    initProjectFilters(lang, projectsList);
     renderProjects(projectsList, lang);
+    initProjectFilters(lang, projectsList);
     renderHome(lang);
   }
 
-  // Initial state (on page load)
+  // Initial render
   updateUI(getLang());
 
-
-  // Click handling
+  // Switch handling
   buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
       const lang = btn.dataset.lang;
