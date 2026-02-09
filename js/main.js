@@ -27,10 +27,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   renderContact(lang);
 
-  loadProjectsFromCMS().then((cmsProjects) => {
+  let cmsProjects = [];
+
+  loadProjectsFromCMS().then((list) => {
+    cmsProjects = list;
     renderProjects(cmsProjects, lang);
-    initProjectFilters(lang, cmsProjects);
+    initProjectFilters(() => cmsProjects);
   });
-  initLanguageToggle();
+  initLanguageToggle(() => cmsProjects);
 
 });

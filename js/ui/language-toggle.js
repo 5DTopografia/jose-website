@@ -25,8 +25,8 @@ export function initLanguageToggle() {
     // Re-render dynamic sections
     renderServices(lang);
     initServiceInteractions();
-    initProjectFilters(lang);
-    renderProjects(projects, lang);
+    initProjectFilters(lang, projectsList);
+    renderProjects(projectsList, lang);
     renderHome(lang);
   }
 
