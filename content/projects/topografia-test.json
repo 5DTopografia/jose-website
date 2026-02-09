@@ -1,0 +1,17 @@
+{
+  "visible": true,
+  "internalTitle": "Topografia Test",
+  "title": {
+    "es": "TOPOGRAFIA TEST",
+    "en": "TOPOGRAPHY TEST"
+  },
+  "description": {
+    "es": "ESTO ES UN TEST",
+    "en": "THIS IS A TEST "
+  },
+  "serviceType": "topografia",
+  "date": "2026-02-09",
+  "images": [
+    "/assets/uploads/img_1276_1_1_resized_resized.jpg"
+  ]
+}
