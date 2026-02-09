@@ -1,3 +1,5 @@
+console.error("LANGUAGE TOGGLE FILE LOADED v2026-02-09");
+
 import { getLang, setLang } from "../core/language.js";
 import { renderServices } from "./services.js";
 import { renderProjects } from "./projects.js";
