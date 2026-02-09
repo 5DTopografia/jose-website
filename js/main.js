@@ -1,3 +1,4 @@
+console.error("🔥 MAIN.JS LOADED");
 import { initHeader } from "./ui/header.js";
 import { initFilters } from "./core/filters.js";
 import { initLanguage } from "./core/language.js";
