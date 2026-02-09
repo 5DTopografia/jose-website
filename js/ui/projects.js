@@ -1,4 +1,3 @@
-import { applyImageFallbacks } from "./image-fallback.js";
 
 export function renderProjects(list = [], lang = "es") {
   const grid = document.getElementById("projectsGrid");
@@ -12,9 +11,7 @@ export function renderProjects(list = [], lang = "es") {
 
   visibleProjects.forEach(project => {
     const imgSrc =
-      project.images?.[0] ||
-      project.image ||
-      "";
+      project.images?.[0] ?? "";
 
     const card = document.createElement("article");
     card.className = "project-card";
@@ -32,8 +29,6 @@ export function renderProjects(list = [], lang = "es") {
 
     grid.appendChild(card);
   });
-
-  applyImageFallbacks(grid);
 }
 
 function formatDate(dateStr) {
