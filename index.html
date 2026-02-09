@@ -169,5 +169,20 @@
 
   <script type="module" src="/js/main.js"></script>
 
+  <!-- Netlify Identity -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", () => {
+      const hash = window.location.hash;
+
+      if (hash.includes("invite_token") || hash.includes("recovery_token")) {
+        window.netlifyIdentity.open();
+      }
+    });
+  }
+</script>
+
 </body>
 </html>
