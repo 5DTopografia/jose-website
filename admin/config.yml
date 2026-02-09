@@ -12,6 +12,9 @@ collections:
     create: true
     slug: "{{slug}}"
     format: "json"
+    identifier_field: title.es
+
+    summary: "{{title.es}} — {{date}}"
 
     fields:
       - { label: "Visible", name: "visible", widget: "boolean", default: true }
