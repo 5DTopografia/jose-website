@@ -12,21 +12,20 @@
   <script src="https://unpkg.com/decap-cms@latest/dist/decap-cms.js"></script>
 </head>
 <body>
+  <!-- REQUIRED mount point -->
+  <div id="nc-root"></div>
 
-    <!-- REQUIRED mount point -->
-    <div id="nc-root"></div>
-
-    <!-- Identity redirect logic -->
-    <script>
-        if (window.netlifyIdentity) {
-          window.netlifyIdentity.on("init", user => {
-            if (!user) {
-              window.netlifyIdentity.on("login", () => {
-                document.location.href = "/admin/";
-              });
-            }
+  <!-- Identity redirect AFTER CMS boot -->
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
           });
         }
-      </script>
+      });
+    }
+  </script>
 </body>
 </html>
