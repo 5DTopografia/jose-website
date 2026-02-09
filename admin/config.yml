@@ -1,0 +1,55 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "projects"
+    label: "Projects"
+    folder: "content/projects"
+    create: true
+    slug: "{{slug}}"
+    format: "json"
+
+    fields:
+      - { label: "Visible", name: "visible", widget: "boolean", default: true }
+
+      - label: "Title"
+        name: "title"
+        widget: "object"
+        fields:
+          - { label: "ES", name: "es", widget: "string" }
+          - { label: "EN", name: "en", widget: "string" }
+
+      - label: "Description"
+        name: "description"
+        widget: "object"
+        fields:
+          - { label: "ES", name: "es", widget: "text" }
+          - { label: "EN", name: "en", widget: "text" }
+
+      - label: "Service type"
+        name: "serviceType"
+        widget: "select"
+        options:
+          - topografia
+          - bim
+          - drones
+
+      - { label: "Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+
+      - label: "YouTube videos"
+        name: "videos"
+        widget: "list"
+        allow_add: true
+        field:
+          { label: "YouTube URL", name: "url", widget: "string" }
+
+      - label: "Images"
+        name: "images"
+        widget: "list"
+        required: false
+        field:
+          { label: "Image", name: "image", widget: "image" }
