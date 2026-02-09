@@ -1,5 +1,4 @@
 import { services } from "../data/services.js";
-import { applyImageFallbacks } from "./image-fallback.js";
 
 /**
  * Safely resolve translated or plain string values
@@ -53,6 +52,4 @@ export function renderServices(lang = "es") {
   `
     )
     .join("");
-
-  applyImageFallbacks(grid);
 }
