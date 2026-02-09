@@ -3,6 +3,8 @@ import { initFilters } from "./core/filters.js";
 import { initLanguage } from "./core/language.js";
 import { renderServices } from "./ui/services.js";
 import { initServiceInteractions } from "./ui/services-interactions.js";
+
+import { loadProjectsFromCMS } from "./data/projects-api.js";
 import { renderProjects } from "./ui/projects.js";
 import { initProjectFilters } from "./ui/filters-ui.js";
 import { initLanguageToggle } from "./ui/language-toggle.js";
@@ -25,8 +27,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   renderContact(lang);
 
-  renderProjects(undefined, lang);
-  initProjectFilters(lang);
+  loadProjectsFromCMS().then((cmsProjects) => {
+    renderProjects(cmsProjects, lang);
+    initProjectFilters(lang, cmsProjects);
+  });
   initLanguageToggle();
 
 });

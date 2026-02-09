@@ -1,41 +1,43 @@
-import { projects } from "../data/project.js";
 import { applyImageFallbacks } from "./image-fallback.js";
 
-
-export function renderProjects(list = projects, lang = "es") {
+export function renderProjects(list = [], lang = "es") {
   const grid = document.getElementById("projectsGrid");
   if (!grid) return;
+
+  if (!Array.isArray(list)) list = [];
 
   grid.innerHTML = "";
 
   const visibleProjects = list
-    .filter((p) => p.visible)
+    .filter(p => p.visible !== false)
     .sort((a, b) => new Date(b.date) - new Date(a.date));
 
   visibleProjects.forEach((project) => {
+    const imgSrc = project.image || project.images?.[0]?.image || "";
+
     const card = document.createElement("article");
     card.className = "project-card";
 
     card.innerHTML = `
       <div class="project-image">
-        <img src="${project.image}" alt="${project.title}">
+        <img src="${imgSrc}" alt="">
       </div>
 
       <div class="project-content">
-        <h3>${project.title[lang] ?? project.title}</h3>
-        <p>${project.description[lang] ?? project.description}</p>
-        <span class="project-date">
-          ${formatDate(project.date)}
-        </span>
+        <h3>${project.title?.[lang] ?? ""}</h3>
+        <p>${project.description?.[lang] ?? ""}</p>
+        <span class="project-date">${formatDate(project.date)}</span>
       </div>
     `;
 
     grid.appendChild(card);
   });
-    applyImageFallbacks(grid);
+
+  applyImageFallbacks(grid);
 }
 
 function formatDate(dateStr) {
+  if (!dateStr) return "";
   const [year, month, day] = dateStr.split("-");
   return `${day}/${month}/${year}`;
 }
