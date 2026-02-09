@@ -6,7 +6,7 @@ import { initProjectFilters } from "./filters-ui.js";
 import { renderHome } from "./home.js";
 
 
-export function initLanguageToggle() {
+export function initLanguageToggle(getProjects) {
   const switcher = document.getElementById("langSwitch");
   if (!switcher) return;
 
@@ -25,23 +25,27 @@ export function initLanguageToggle() {
     // Re-render dynamic sections
     renderServices(lang);
     initServiceInteractions();
+
+    const projectsList =
+    typeof getProjects === "function" ? getProjects() : [];
+
     initProjectFilters(lang, projectsList);
     renderProjects(projectsList, lang);
     renderHome(lang);
   }
 
   // Initial state (on page load)
-  const currentLang = getLang();
-  updateUI(currentLang);
+  updateUI(getLang());
+
 
   // Click handling
   buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
-      const selectedLang = btn.dataset.lang;
-      if (selectedLang === getLang()) return;
+      const lang = btn.dataset.lang;
+      if (lang === getLang()) return;
 
-      setLang(selectedLang);
-      updateUI(selectedLang);
+      setLang(lang);
+      updateUI(lang);
     });
   });
 }

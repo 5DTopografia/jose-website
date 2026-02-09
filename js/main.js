@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
   loadProjectsFromCMS().then((list) => {
     cmsProjects = list;
     renderProjects(cmsProjects, lang);
-    initProjectFilters(() => cmsProjects);
+    initProjectFilters(lang, cmsProjects);
   });
   initLanguageToggle(() => cmsProjects);
 
