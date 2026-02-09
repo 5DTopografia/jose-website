@@ -2,9 +2,7 @@ import { applyImageFallbacks } from "./image-fallback.js";
 
 export function renderProjects(list = [], lang = "es") {
   const grid = document.getElementById("projectsGrid");
-  if (!grid) return;
-
-  if (!Array.isArray(list)) list = [];
+  if (!grid || !Array.isArray(list)) return;
 
   grid.innerHTML = "";
 
@@ -12,8 +10,11 @@ export function renderProjects(list = [], lang = "es") {
     .filter(p => p.visible !== false)
     .sort((a, b) => new Date(b.date) - new Date(a.date));
 
-  visibleProjects.forEach((project) => {
-    const imgSrc = project.image || project.images?.[0]?.image || "";
+  visibleProjects.forEach(project => {
+    const imgSrc =
+      project.images?.[0] ||
+      project.image ||
+      "";
 
     const card = document.createElement("article");
     card.className = "project-card";
@@ -22,7 +23,6 @@ export function renderProjects(list = [], lang = "es") {
       <div class="project-image">
         <img src="${imgSrc}" alt="">
       </div>
-
       <div class="project-content">
         <h3>${project.title?.[lang] ?? ""}</h3>
         <p>${project.description?.[lang] ?? ""}</p>

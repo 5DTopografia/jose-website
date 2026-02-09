@@ -3,7 +3,6 @@ import { renderServices } from "./services.js";
 import { renderProjects } from "./projects.js";
 import { initServiceInteractions } from "./services-interactions.js";
 import { initProjectFilters } from "./filters-ui.js";
-import { projects } from "../data/project.js";
 import { renderHome } from "./home.js";
 
 
