@@ -1,4 +1,5 @@
 import { getLang, setLang } from "../core/language.js";
+import { applyStaticI18n } from "../i18n/static.js";
 import { renderServices } from "./services.js";
 import { renderProjects } from "./projects.js";
 import { initServiceInteractions } from "./services-interactions.js";
@@ -13,6 +14,8 @@ export function initLanguageToggle(getProjects) {
   if (!buttons.length) return;
 
   function updateUI(lang) {
+    applyStaticI18n(lang); 
+    
     document.documentElement.lang = lang;
 
     buttons.forEach((btn) => {
@@ -44,5 +47,6 @@ export function initLanguageToggle(getProjects) {
       setLang(lang);
       updateUI(lang);
     });
+
   });
 }
