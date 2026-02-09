@@ -1,5 +1,3 @@
-console.error("🔥 MAIN.JS LOADED");
-
 import { initHeader } from "./ui/header.js";
 import { initFilters } from "./core/filters.js";
 import { initLanguage } from "./core/language.js";
@@ -15,7 +13,6 @@ import { renderHome } from "./ui/home.js";
 import { renderContact } from "./ui/contact.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  console.error("🔥 DOMContentLoaded");
 
   initLanguage();
   initHeader();

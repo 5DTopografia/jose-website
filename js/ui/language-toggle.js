@@ -5,8 +5,6 @@ import { initServiceInteractions } from "./services-interactions.js";
 import { initProjectFilters } from "./filters-ui.js";
 import { renderHome } from "./home.js";
 
-console.error("🌍 LANGUAGE TOGGLE LOADED");
-
 export function initLanguageToggle(getProjects) {
   const switcher = document.getElementById("langSwitch");
   if (!switcher) return;
