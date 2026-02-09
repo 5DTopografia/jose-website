@@ -12,11 +12,16 @@ collections:
     create: true
     slug: "{{slug}}"
     format: "json"
-    identifier_field: title.es
+    identifier_field: internalTitle
 
-    summary: "{{title.es}} — {{date}}"
+    summary: "{{internalTitle}} — {{date}}"
 
     fields:
+      - label: "Internal title"
+        name: "internalTitle"
+        widget: "string"
+        hint: "Only for CMS identification, not shown on the website"
+
       - { label: "Visible", name: "visible", widget: "boolean", default: true }
 
       - label: "Title"
