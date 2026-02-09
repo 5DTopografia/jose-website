@@ -1,4 +1,4 @@
-console.error("🔥 MAIN.JS LOADED");
+/* console.error("🔥 MAIN.JS LOADED");
 import { initHeader } from "./ui/header.js";
 import { initFilters } from "./core/filters.js";
 import { initLanguage } from "./core/language.js";
@@ -37,4 +37,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   initLanguageToggle(() => cmsProjects);
 
+}); */
+
+console.error("🔥 MAIN.JS LOADED");
+
+document.addEventListener("DOMContentLoaded", () => {
+  console.error("🔥 DOMContentLoaded");
 });
