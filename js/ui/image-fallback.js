@@ -3,13 +3,16 @@ const FALLBACK_IMAGE = "/assets/images/fallback.jpg";
 export function applyImageFallbacks(scope = document) {
   const images = scope.querySelectorAll("img");
 
-  images.forEach(img => {
-    // prevent infinite loop
-    if (img.dataset.fallbackBound) return;
-    img.dataset.fallbackBound = "true";
+  images.forEach((img) => {
+    if (img.dataset.fallbackApplied) return;
 
     img.addEventListener("error", () => {
-      if (img.src.endsWith(FALLBACK_IMAGE)) return;
+      // prevent infinite loop
+      img.dataset.fallbackApplied = "true";
+
+      // last-resort safety
+      if (img.src.includes("fallback")) return;
+
       img.src = FALLBACK_IMAGE;
     });
   });
