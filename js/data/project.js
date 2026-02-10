@@ -45,3 +45,5 @@ export const projects = [
     visible: true
   }
 ];
+
+TODO /*delete file absolute*/

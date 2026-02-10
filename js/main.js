@@ -11,6 +11,7 @@ import { initLanguageToggle } from "./ui/language-toggle.js";
 import { getLang } from "./core/language.js";
 import { renderHome } from "./ui/home.js";
 import { renderContact } from "./ui/contact.js";
+import { renderTechnology } from "./ui/technology.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -24,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderServices(lang);
   initServiceInteractions();
   renderContact(lang);
+  renderTechnology(lang);
 
   let cmsProjects = [];
 

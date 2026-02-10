@@ -2,6 +2,7 @@ import { getLang, setLang } from "../core/language.js";
 import { applyStaticI18n } from "../i18n/static.js";
 import { renderServices } from "./services.js";
 import { renderProjects } from "./projects.js";
+import { renderTechnology } from "./technology.js";
 import { initServiceInteractions } from "./services-interactions.js";
 import { initProjectFilters } from "./filters-ui.js";
 import { renderHome } from "./home.js";
@@ -14,9 +15,9 @@ export function initLanguageToggle(getProjects) {
   if (!buttons.length) return;
 
   function updateUI(lang) {
-    applyStaticI18n(lang); 
-    
     document.documentElement.lang = lang;
+
+    applyStaticI18n(lang);
 
     buttons.forEach((btn) => {
       const isActive = btn.dataset.lang === lang;
@@ -24,21 +25,37 @@ export function initLanguageToggle(getProjects) {
       btn.setAttribute("aria-pressed", isActive);
     });
 
-    renderServices(lang);
-    initServiceInteractions();
+    const page = document
+      .getElementById("mainContent")
+      ?.getAttribute("data-page");
 
-    const projectsList =
-      typeof getProjects === "function" ? getProjects() : [];
+    switch (page) {
+      case "home":
+        renderHome(lang);
+        break;
 
-    renderProjects(projectsList, lang);
-    initProjectFilters(lang, projectsList);
-    renderHome(lang);
+      case "services":
+        renderServices(lang);
+        initServiceInteractions();
+        break;
+
+      case "projects": {
+        const projects =
+          typeof getProjects === "function" ? getProjects() : [];
+        renderProjects(projects, lang);
+        initProjectFilters(lang, projects);
+        break;
+      }
+
+      case "technology":
+        renderTechnology(lang);
+        break;
+    }
   }
 
   // Initial render
   updateUI(getLang());
 
-  // Switch handling
   buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
       const lang = btn.dataset.lang;
@@ -47,6 +64,5 @@ export function initLanguageToggle(getProjects) {
       setLang(lang);
       updateUI(lang);
     });
-
   });
 }
