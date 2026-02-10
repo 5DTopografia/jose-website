@@ -21,11 +21,28 @@ document.addEventListener("DOMContentLoaded", () => {
   
   const lang = getLang();
 
+  const page = document
+  .getElementById("mainContent")
+  ?.getAttribute("data-page");
+
+if (page === "home") {
   renderHome(lang);
+}
+
+if (page === "services") {
   renderServices(lang);
   initServiceInteractions();
+}
+
+if (page === "contact") {
   renderContact(lang);
+}
+
+if (page === "technology") {
   renderTechnology(lang);
+}
+
+  initServiceInteractions();
 
   let cmsProjects = [];
 

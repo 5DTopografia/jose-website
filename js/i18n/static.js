@@ -11,6 +11,8 @@ const DICT = {
     "pages.services.title": "Servicios",
     "pages.projects.title": "Proyectos",
     "pages.technology.title": "Tecnología y equipos",
+    "pages.technology.intro":
+    "Equipos de precisión y tecnología avanzada para garantizar fiabilidad, rapidez y entregas profesionales.",
   },
   en: {
     "nav.about": "About",
@@ -22,6 +24,8 @@ const DICT = {
     "pages.services.title": "Services",
     "pages.projects.title": "Projects",
     "pages.technology.title": "Technology & equipment",
+    "pages.technology.intro":
+    "Precision instruments and advanced technology to ensure reliability, speed, and professional delivery.",
   },
 };
 

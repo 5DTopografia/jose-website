@@ -1,21 +1,32 @@
+import { instruments } from "../data/instruments.js";
+import { applyImageFallbacks } from "./image-fallback.js";
+
 export function renderTechnology(lang = "es") {
-    const copy = {
-      es: {
-        intro:
-          "Equipos de precisión y tecnología avanzada para garantizar fiabilidad, rapidez y entregas profesionales.",
-      },
-      en: {
-        intro:
-          "Precision equipment and advanced technology to ensure reliability, speed, and professional delivery.",
-      },
-    };
-  
-    const t = copy[lang] || copy.es;
-  
-    setText("technologyIntro", t.intro);
-  }
-  
-  function setText(id, value) {
-    const el = document.getElementById(id);
-    if (el) el.textContent = value;
-  }
+  const container = document.getElementById("technologyList");
+  if (!container) return;
+
+  container.innerHTML = "";
+
+  instruments.forEach((item, index) => {
+    const reversed = index % 2 !== 0;
+
+    const article = document.createElement("article");
+    article.className = `technology-item ${
+      reversed ? "is-reversed" : ""
+    }`;
+
+    article.innerHTML = `
+      <div class="technology-media">
+        <img src="${item.image}" alt="${item.title?.[lang] || ""}">
+      </div>
+      <div class="technology-content">
+        <h3>${item.title?.[lang] || ""}</h3>
+        <p>${item.description?.[lang] || ""}</p>
+      </div>
+    `;
+
+    container.appendChild(article);
+  });
+
+  applyImageFallbacks(container);
+}
