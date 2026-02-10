@@ -243,6 +243,18 @@
   }
   
   /* SERVICES */
+
+  .services-area {
+    max-width: 70ch;
+    margin: 0 0 32px;
+    color: #334155;
+    font-size: 1.05rem;
+  }
+
+  .services-area span {
+    display: block;
+    opacity: 0.8;
+  }
   
   .services-inner {
     max-width: 1200px;
@@ -252,7 +264,7 @@
   
   .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 32px;
   }
   
@@ -302,6 +314,32 @@
   .service-card.open .service-description {
     display: block;
   }
+
+  /* service content structure */
+
+.service-intro {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+.service-bullets {
+  display: none;
+  margin-top: 12px;
+  padding-left: 18px;
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+.service-bullets li {
+  margin-bottom: 6px;
+  list-style: disc;
+}
+
+/* Toggle behavior */
+.service-card.open .service-bullets {
+  display: block;
+}
   
   /* PRIMARY SERVICE BUTTON */
   

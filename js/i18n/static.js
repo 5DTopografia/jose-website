@@ -9,6 +9,8 @@ const DICT = {
     "nav.technology": "Tecnología",
 
     "pages.services.title": "Servicios",
+    "pages.services.area":
+    "Trabajamos en el ámbito de las Islas Baleares (Ibiza, Formentera, Mallorca y Menorca)",
     "pages.projects.title": "Proyectos",
     "pages.technology.title": "Tecnología y equipos",
     "pages.technology.intro":
@@ -22,6 +24,8 @@ const DICT = {
     "nav.technology": "Technology",
 
     "pages.services.title": "Services",
+    "pages.services.area":
+    "We operate throughout the Balearic Islands (Ibiza, Formentera, Mallorca and Menorca)",
     "pages.projects.title": "Projects",
     "pages.technology.title": "Technology & equipment",
     "pages.technology.intro":
