@@ -30,6 +30,12 @@ export function openProjectModal(project, lang = "es") {
             </div>
   
             <div class="glide__arrows" data-glide-el="controls">
+                <div class="glide__bullets" data-glide-el="controls[nav]">
+                    ${images.map((_, i) => `
+                        <button class="glide__bullet" data-glide-dir="=${i}"></button>
+                    `).join("")}
+                </div>
+                
               <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
                 ‹
               </button>
@@ -117,7 +123,7 @@ export function openProjectModal(project, lang = "es") {
   }
   
   /* YouTube converter */ 
-  
+
   function convertYoutube(url) {
     if (!url) return "";
   
