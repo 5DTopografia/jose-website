@@ -45,6 +45,17 @@ collections:
           - topografia
           - bim
           - drones
+          
+      - label: "Instruments used"
+        name: "instruments"
+        widget: "select"
+        multiple: true
+        required: false
+        options:
+          - { label: "Estación total robotizada", value: "total-station" }
+          - { label: "GPS GNSS", value: "gnss" }
+          - { label: "Escáner LiDAR SLAM RTK", value: "lidar" }
+          - { label: "Drones profesionales", value: "drones" }
 
       - { label: "Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
 
