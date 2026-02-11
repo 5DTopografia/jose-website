@@ -24,10 +24,11 @@ export function renderHome(lang = "es") {
 
       aboutTitle: "Nosotros",
       aboutText:
-        "Trabajamos con tecnología avanzada y un enfoque práctico para aportar precisión, rapidez y tranquilidad en cada entrega.",
-      p1: "✅ Mediciones precisas y documentación clara",
-      p2: "✅ Integración topográfica en flujos BIM",
-      p3: "✅ Entregas profesionales y comunicación directa",
+      "5D Topografía & BIM integra topografía clásica y tecnologías avanzadas de captura de la realidad para generar información técnica precisa y jurídicamente coherente. Trabajamos para estudios de arquitectura, ingenierías y administraciones públicas, aportando datos fiables que permiten proyectar, ejecutar y regularizar con seguridad.",
+    
+      p1: "Estación Total Robotizada y GNSS RTK",
+      p2: "Escáner LiDAR SLAM RTK y fotogrametría aérea",
+      p3: "Integración topográfica en flujos BIM y documentación técnica verificable",
 
       tsTitle: "Servicios",
       tsText:
@@ -65,10 +66,11 @@ export function renderHome(lang = "es") {
 
       aboutTitle: "About",
       aboutText:
-        "We use advanced technology and a practical approach to bring precision, speed, and peace of mind in every delivery.",
-      p1: "✅ Accurate surveys and clear documentation",
-      p2: "✅ Topographic integration into BIM workflows",
-      p3: "✅ Professional delivery and direct communication",
+      "5D Topografía & BIM combines classical surveying methods with advanced reality capture technologies to deliver precise and legally consistent technical information. We collaborate with architectural studios, engineering firms and public administrations, providing reliable data that supports design, construction and regulatory processes with confidence.",
+    
+      p1: "Robotic Total Station and GNSS RTK surveying",
+      p2: "LiDAR SLAM RTK scanning and aerial photogrammetry",
+      p3: "Topographic integration into BIM workflows and verifiable technical documentation",
 
       tsTitle: "Services",
       tsText:
