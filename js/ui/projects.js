@@ -1,3 +1,4 @@
+import { openProjectModal } from "./project-modal.js";
 
 export function renderProjects(list = [], lang = "es") {
   const grid = document.getElementById("projectsGrid");
