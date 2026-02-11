@@ -66,8 +66,13 @@ collections:
         field:
           { label: "YouTube URL", name: "url", widget: "string" }
 
-      - label: "Images"
-        name: "images"
+      - label: "Cover image (card)"
+        name: "coverImage"
+        widget: "image"
+        required: true
+
+      - label: "Gallery images"
+        name: "galleryImages"
         widget: "list"
         required: false
         field:
