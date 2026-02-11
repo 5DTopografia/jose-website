@@ -1,17 +1,24 @@
 {
+  "instruments": [
+    "lidar",
+    "gnss"
+  ],
+  "date": "2026-02-09",
+  "serviceType": "topografia",
   "visible": true,
-  "internalTitle": "Topografia Test",
   "title": {
     "es": "TOPOGRAFIA TEST",
     "en": "TOPOGRAPHY TEST"
   },
+  "images": [
+    "/assets/uploads/perfil.b-w.png"
+  ],
+  "videos": [
+    "https://www.youtube.com/watch?v=9y2X2PpcQoc"
+  ],
+  "internalTitle": "Topografia Test",
   "description": {
     "es": "ESTO ES UN TEST",
     "en": "THIS IS A TEST "
-  },
-  "serviceType": "topografia",
-  "date": "2026-02-09",
-  "images": [
-    "/assets/uploads/perfil.b-w.png"
-  ]
+  }
 }
