@@ -1,0 +1,26 @@
+{
+  "instruments": [
+    "drones",
+    "lidar"
+  ],
+  "date": "2026-02-11",
+  "serviceType": "bim",
+  "visible": true,
+  "title": {
+    "es": "esto es un test bim",
+    "en": "this is a test bim"
+  },
+  "images": [
+    "/assets/uploads/screenshot-2026-02-05-at-12.07.53.png",
+    "/assets/uploads/degradado-fondo-video-youtube-crudo.png",
+    "/assets/uploads/screenshot-2025-12-18-at-12.14.03.png"
+  ],
+  "videos": [
+    "https://www.youtube.com/watch?v=9y2X2PpcQoc"
+  ],
+  "internalTitle": "BIM test ",
+  "description": {
+    "es": "bim topografia prueba texto",
+    "en": "bim topography trial text"
+  }
+}
