@@ -6,6 +6,7 @@ import { renderTechnology } from "./technology.js";
 import { initServiceInteractions } from "./services-interactions.js";
 import { initProjectFilters } from "./filters-ui.js";
 import { renderHome } from "./home.js";
+import { initHomeGallery } from "./home-gallery.js";
 
 export function initLanguageToggle(getProjects) {
   const switcher = document.getElementById("langSwitch");
@@ -32,6 +33,7 @@ export function initLanguageToggle(getProjects) {
     switch (page) {
       case "home":
         renderHome(lang);
+        initHomeGallery(lang);
         break;
 
       case "services":

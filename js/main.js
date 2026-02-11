@@ -10,6 +10,7 @@ import { initProjectFilters } from "./ui/filters-ui.js";
 import { initLanguageToggle } from "./ui/language-toggle.js";
 import { getLang } from "./core/language.js";
 import { renderHome } from "./ui/home.js";
+import { initHomeGallery } from "./ui/home-gallery.js";
 import { renderContact } from "./ui/contact.js";
 import { renderTechnology } from "./ui/technology.js";
 
@@ -27,11 +28,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 if (page === "home") {
   renderHome(lang);
+  initHomeGallery(lang);
+  initHeroGlide();
 }
 
 if (page === "services") {
   renderServices(lang);
   initServiceInteractions();
+
 }
 
 if (page === "contact") {
@@ -63,3 +67,16 @@ document.querySelector(".modal-close")?.addEventListener("click", () => {
 document.querySelector(".modal-overlay")?.addEventListener("click", () => {
   document.getElementById("projectModal").classList.add("hidden");
 });
+
+function initHeroGlide() {
+  const hero = document.querySelector("#heroGlide");
+  if (!hero) return;
+
+  new Glide(hero, {
+    type: "carousel",
+    autoplay: 4000,
+    animationDuration: 900,
+    hoverpause: true,
+    perView: 1
+  }).mount();
+}
