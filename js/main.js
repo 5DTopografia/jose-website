@@ -56,3 +56,10 @@ if (page === "technology") {
 
 }); 
 
+document.querySelector(".modal-close")?.addEventListener("click", () => {
+  document.getElementById("projectModal").classList.add("hidden");
+});
+
+document.querySelector(".modal-overlay")?.addEventListener("click", () => {
+  document.getElementById("projectModal").classList.add("hidden");
+});
