@@ -11,9 +11,13 @@
     "en": "TOPOGRAPHY TEST"
   },
   "images": [
+<<<<<<< HEAD
     "/assets/uploads/perfil.b-w.png",
     "/assets/uploads/screenshot-2026-02-05-at-12.07.53.png",
     "/assets/uploads/degradado-fondo-video-youtube-crudo.png"
+=======
+    "/assets/uploads/perfil.b-w.png"
+>>>>>>> 1e514afee26eb16604305eccdb7576214cb79cba
   ],
   "videos": [
     "https://www.youtube.com/watch?v=9y2X2PpcQoc"
