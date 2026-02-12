@@ -77,3 +77,23 @@ collections:
         required: false
         field:
           { label: "Image", name: "image", widget: "image" }
+
+
+          
+
+  - name: "settings"
+    label: "Settings"
+    files:
+      - label: "Technology Slider"
+        name: "technologySlider"
+        file: "content/settings/technology-slider.json"
+        format: "json"
+        fields:
+          - label: "Slides"
+            name: "slides"
+            widget: "list"
+            summary: "{{fields.image}}"
+            field:
+              label: "Image"
+              name: "image"
+              widget: "image"
