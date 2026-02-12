@@ -7,6 +7,8 @@ import { initServiceInteractions } from "./services-interactions.js";
 import { initProjectFilters } from "./filters-ui.js";
 import { renderHome } from "./home.js";
 import { initHomeGallery } from "./home-gallery.js";
+import { renderLegal } from "./legal.js";
+import { renderPrivacy } from "./privacy.js";
 
 export function initLanguageToggle(getProjects) {
   const switcher = document.getElementById("langSwitch");
@@ -52,6 +54,14 @@ export function initLanguageToggle(getProjects) {
       case "technology":
         renderTechnology(lang);
         break;
+      
+      case "legal":
+          renderLegal(lang);
+          break;
+        
+      case "privacy":
+          renderPrivacy(lang);
+          break;
     }
   }
 

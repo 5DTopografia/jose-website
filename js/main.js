@@ -14,6 +14,9 @@ import { initHomeGallery } from "./ui/home-gallery.js";
 import { renderContact } from "./ui/contact.js";
 import { renderTechnology } from "./ui/technology.js";
 
+import { renderLegal } from "./ui/legal.js";
+import { renderPrivacy } from "./ui/privacy.js";
+
 document.addEventListener("DOMContentLoaded", () => {
 
   initLanguage();
@@ -44,6 +47,14 @@ if (page === "contact") {
 
 if (page === "technology") {
   renderTechnology(lang);
+}
+
+if (page === "legal") {
+  renderLegal(lang);
+}
+
+if (page === "privacy") {
+  renderPrivacy(lang);
 }
 
   initServiceInteractions();
