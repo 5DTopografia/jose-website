@@ -4,7 +4,10 @@ export function openProjectModal(project, lang = "es") {
   
     if (!modal || !modalBody) return;
   
-    const images = project.images || [];
+    const images =
+    project.galleryImages ||
+    project.images ||
+    [];
     const videos = project.videos || [];
   
     modalBody.innerHTML = `
