@@ -20,3 +20,34 @@ export function renderTechnology(lang = "es") {
     container.appendChild(article);
   });
 }
+
+/* CMS SLIDER LOADER */
+export async function loadTechnologySlider() {
+  try {
+    const res = await fetch("/.netlify/functions/settings");
+    const data = await res.json();
+
+    const slidesContainer = document.getElementById("technologySlides");
+    if (!slidesContainer) return;
+
+    slidesContainer.innerHTML = "";
+
+    (data.slides || []).forEach((slide) => {
+      const li = document.createElement("li");
+      li.className = "glide__slide";
+      li.innerHTML = `<img src="${slide.image}" alt="">`;
+      slidesContainer.appendChild(li);
+    });
+
+    // IMPORTANT: mount AFTER injecting slides
+    new Glide("#technologyGlide", {
+      type: "carousel",
+      autoplay: 4000,
+      hoverpause: true,
+      animationDuration: 800,
+    }).mount();
+
+  } catch (error) {
+    console.error("Technology slider failed:", error);
+  }
+}

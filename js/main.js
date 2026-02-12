@@ -13,6 +13,7 @@ import { renderHome } from "./ui/home.js";
 import { initHomeGallery } from "./ui/home-gallery.js";
 import { renderContact } from "./ui/contact.js";
 import { renderTechnology } from "./ui/technology.js";
+import { loadTechnologySlider } from "./ui/technology.js";
 
 import { renderLegal } from "./ui/legal.js";
 import { renderPrivacy } from "./ui/privacy.js";
@@ -46,7 +47,7 @@ if (page === "contact") {
 
 if (page === "technology") {
   renderTechnology(lang);
-  initTechnologyGlide();
+  loadTechnologySlider();
 }
 
 if (page === "legal") {
