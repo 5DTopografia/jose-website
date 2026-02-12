@@ -1,7 +1,8 @@
 {
   "coverImage": "/assets/uploads/img_2134.jpeg",
   "galleryImages": [
-    "/assets/uploads/img_2134.jpeg"
+    "/assets/uploads/img_2134.jpeg",
+    "/assets/uploads/img_2345.jpeg"
   ],
   "instruments": [
     "lidar",
