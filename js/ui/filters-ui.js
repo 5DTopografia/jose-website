@@ -4,8 +4,7 @@ import { renderProjects } from "./projects.js";
 
 export function initProjectFilters(lang = "es", projectsList = []) {
   const desktop = document.getElementById("projectFilters");
-  const mobile = document.getElementById("projectFiltersMobile");
-  if (!desktop || !mobile) return;
+  if (!desktop) return;
 
   const LABELS = {
     es: { all: "Todos" },
@@ -27,19 +26,6 @@ export function initProjectFilters(lang = "es", projectsList = []) {
       .join("")}
   `;
 
-  // Mobile dropdown
-  mobile.innerHTML = `
-    <option value="all">${LABELS[lang].all}</option>
-    ${services
-      .map(
-        (s) => `
-          <option value="${s.id}">
-            ${s.title[lang]}
-          </option>`
-      )
-      .join("")}
-  `;
-
   // Initial render (ALL)
   renderProjects(projectsList, lang);
 
@@ -54,17 +40,6 @@ export function initProjectFilters(lang = "es", projectsList = []) {
     btn.classList.add("is-active");
 
     const type = btn.dataset.filter;
-    const filtered =
-      type === "all"
-        ? projectsList
-        : filterProjectsByService(projectsList, type);
-
-    renderProjects(filtered, lang);
-  };
-
-  // Mobile change
-  mobile.onchange = (e) => {
-    const type = e.target.value;
     const filtered =
       type === "all"
         ? projectsList
