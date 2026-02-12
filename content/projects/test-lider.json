@@ -1,0 +1,25 @@
+{
+  "coverImage": "/assets/uploads/img_2134.jpeg",
+  "galleryImages": [
+    "/assets/uploads/img_2216.jpeg",
+    "/assets/uploads/img_2134.jpeg"
+  ],
+  "instruments": [
+    "lidar"
+  ],
+  "date": "2026-02-12",
+  "serviceType": "bim",
+  "visible": true,
+  "title": {
+    "es": "Esto es un test LiDER",
+    "en": "This a test LiDER"
+  },
+  "videos": [
+    "https://www.youtube.com/watch?v=2wOc87Zqxtc"
+  ],
+  "internalTitle": "TEST LiDER",
+  "description": {
+    "es": "test para probar operaciones CRUD",
+    "en": "test to try CRUD operations "
+  }
+}
