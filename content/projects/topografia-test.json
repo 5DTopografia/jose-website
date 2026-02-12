@@ -1,4 +1,8 @@
 {
+  "coverImage": "/assets/uploads/img_2134.jpeg",
+  "galleryImages": [
+    "/assets/uploads/img_2134.jpeg"
+  ],
   "instruments": [
     "lidar",
     "gnss"
