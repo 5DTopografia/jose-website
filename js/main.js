@@ -32,7 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
 if (page === "home") {
   renderHome(lang);
   initHomeGallery(lang);
-  initHeroGlide();
 }
 
 if (page === "services") {
@@ -47,6 +46,7 @@ if (page === "contact") {
 
 if (page === "technology") {
   renderTechnology(lang);
+  initTechnologyGlide();
 }
 
 if (page === "legal") {
@@ -79,15 +79,15 @@ document.querySelector(".modal-overlay")?.addEventListener("click", () => {
   document.getElementById("projectModal").classList.add("hidden");
 });
 
-function initHeroGlide() {
-  const hero = document.querySelector("#heroGlide");
-  if (!hero) return;
+function initTechnologyGlide() {
+  const slider = document.querySelector("#technologyGlide");
+  if (!slider) return;
 
-  new Glide(hero, {
+  new Glide(slider, {
     type: "carousel",
     autoplay: 4000,
-    animationDuration: 900,
-    hoverpause: true,
-    perView: 1
+    animationDuration: 800,
+    perView: 1,
+    hoverpause: true
   }).mount();
 }
