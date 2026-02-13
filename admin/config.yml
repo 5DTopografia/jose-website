@@ -121,5 +121,12 @@ collections:
             widget: "list"
             summary: "{{fields.id}}"
             fields:
-              - { label: "Service ID", name: "id", widget: "string" }
+              - label: "Service ID"
+                name: "id"
+                widget: "select"
+                options:
+                  - { label: "Topografía clásica", value: "topografia" }
+                  - { label: "Escáner LiDAR SLAM RTK", value: "lidar" }
+                  - { label: "Drones – Fotogrametría y LiDAR", value: "drones" }
+                  - { label: "Topografía y BIM", value: "bim" }
               - { label: "Image", name: "image", widget: "image" }
