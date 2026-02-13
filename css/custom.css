@@ -4,6 +4,7 @@
     --color-yellow: #ffd44d;
     --color-yellow-hover: #ffcc33;
     --color-blue: #2f8faa;
+    --color-blue-hover: #277f99;
     --color-blue-dark: #0b2b35;
   
     --color-text: #0f172a;
@@ -629,13 +630,16 @@
   padding: 10px 16px;
   background: var(--color-yellow);
   color: var(--color-blue);
+  background: rgba(255, 255, 255, 0.14);
+  color: var(--color-white);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 10px;
   font-weight: 700;
   transition: transform 0.15s ease, background 0.15s ease;
 }
 
 .btn-primary:hover {
-  background: var(--color-yellow-hover);
+  background: var(--color-blue-hover);
   transform: translateY(-1px);
 }
 
@@ -644,11 +648,15 @@
   align-items: center;
   justify-content: center;
   padding: 10px 16px;
-  background: rgba(255, 255, 255, 0.14);
-  color: var(--color-white);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: var(--color-yellow);
+  color: var(--color-blue);
   border-radius: 10px;
   font-weight: 700;
+}
+
+.btn-secondary:hover {
+  background: var(--color-yellow-hover);
+  transform: translateY(-1px);
 }
 
 .hero-card {
@@ -688,6 +696,21 @@
   background: var(--color-yellow);
   color: var(--color-blue);
   font-weight: 700;
+  transition: 
+              background 0.2s ease, 
+              transform 0.15s ease, 
+              box-shadow 0.2s ease;
+}
+
+.chip:hover {
+  background: var(--color-yellow-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.chip:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
 }
 
 .hero-bullets {

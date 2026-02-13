@@ -27,6 +27,7 @@ export function renderHome(lang = "es") {
       cardText:
         "¿Tienes planos, mediciones o un proyecto en marcha? Escríbenos y te respondemos por email o teléfono.",
       chipEmail: "Email",
+      chipPhone: "Llamar",
 
       aboutTitle: "Nosotros",
       aboutText:
@@ -75,6 +76,7 @@ export function renderHome(lang = "es") {
       cardText:
         "Have plans, measurements, or an ongoing project? Contact us and we’ll reply by email or phone.",
       chipEmail: "Email",
+      chipPhone: "Call",
 
       aboutTitle: "About",
       aboutText:
@@ -121,6 +123,7 @@ export function renderHome(lang = "es") {
   setText("homeCardTitle", t.cardTitle);
   setText("homeCardText", t.cardText);
   setText("homeChipEmail", t.chipEmail);
+  setText("homeChipPhone", t.chipPhone);
 
   setText("homeAboutTitle", t.aboutTitle);
   setText("homeAboutText", t.aboutText);
