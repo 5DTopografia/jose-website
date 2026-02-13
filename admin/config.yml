@@ -109,17 +109,17 @@ collections:
   # ==========================================
 
   - name: "serviceSettings"
-  label: "Service Images"
-  files:
-    - label: "Services Images"
-      name: "servicesImages"
-      file: "content/settings/services-images.json"
-      format: "json"
-      fields:
-        - label: "Services"
-          name: "services"
-          widget: "list"
-          summary: "{{fields.id}}"
-          fields:
-            - { label: "Service ID", name: "id", widget: "string" }
-            - { label: "Image", name: "image", widget: "image" }
+    label: "Service Images"
+    files:
+      - label: "Services Images"
+        name: "servicesImages"
+        file: "content/settings/services-images.json"
+        format: "json"
+        fields:
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            summary: "{{fields.id}}"
+            fields:
+              - { label: "Service ID", name: "id", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
