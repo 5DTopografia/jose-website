@@ -1,0 +1,25 @@
+{
+  "coverImage": "/assets/uploads/topografia.jpeg",
+  "galleryImages": [
+    "/assets/uploads/lidar.jpeg",
+    "/assets/uploads/drones.jpeg"
+  ],
+  "instruments": [
+    "lidar"
+  ],
+  "date": "2026-02-05",
+  "serviceType": "lidar",
+  "visible": true,
+  "title": {
+    "es": "LiDAR - esto es un test ",
+    "en": "LiDAR - this is a test "
+  },
+  "videos": [
+    "https://www.youtube.com/watch?v=K_wGtTSrTzU&pp=ygUVbGlkYXIgc2NhbiB0b3BvZ3JhZmlh"
+  ],
+  "internalTitle": "LiDAR - test ",
+  "description": {
+    "es": "Esto es un test para probare el contenido dentro de un proyecto. El contenido no se refiere a un proyecto real. Toda las referencias son puramente por objetivo de diseño y resoluccion final de un tipo de proyecto.",
+    "en": "This is a test to try the context inside a project. The content does not refer to a real project. All technicaland not technical references are built for design purpose to give an idea of a final project example."
+  }
+}
