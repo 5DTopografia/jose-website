@@ -2,7 +2,7 @@
   "coverImage": "/assets/uploads/technology1.jpeg",
   "galleryImages": [
     "/assets/uploads/bim.jpg",
-    "/assets/uploads/topografia.jpeg"
+    "/assets/uploads/drones.jpeg"
   ],
   "instruments": [
     "lidar",
@@ -12,15 +12,15 @@
   "serviceType": "bim",
   "visible": true,
   "title": {
-    "es": "Esto es un test LiDER",
-    "en": "This a test LiDER"
+    "es": "LiDER - ESTO ES UN TEST ",
+    "en": "LiDER - THIS IS A TEST "
   },
   "videos": [
     "https://www.youtube.com/watch?v=2wOc87Zqxtc"
   ],
-  "internalTitle": "TEST LiDER",
+  "internalTitle": "test lider para probar proyectos",
   "description": {
-    "es": "test para probar operaciones CRUD , añadiendo fotos ",
-    "en": "test to try CRUD operations , adding fotos"
+    "es": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec semper lorem id risus pellentesque pharetra. Nulla cursus velit et mi efficitur tempor posuere sit amet ipsum. Maecenas sed massa sagittis, porttitor augue ut, faucibus risus. Vestibulum consectetur nibh ac hendrerit sagittis. Phasellus pharetra mauris vitae ex mollis faucibus. Vestibulum feugiat placerat sapien id vulputate. Integer urna dolor, elementum in iaculis eu, rhoncus in magna. Etiam auctor vitae ex sed accumsan. Nullam vehicula erat nunc, sed convallis quam bibendum sed. Integer id ultrices erat, ac ultricies leo. Sed non odio purus. Duis sodales lacus lorem, ac tempus odio sodales sed. Etiam eu semper neque.",
+    "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at ipsum congue, tincidunt ligula non, blandit odio. Ut auctor vel nisl in gravida. Nunc dictum, tellus nec posuere lobortis, tellus ante malesuada sem, condimentum pharetra nisl sapien sed purus. Duis eu felis ex. Maecenas vestibulum libero a porta malesuada. Proin aliquam neque ac mauris lobortis congue. In ut quam quis orci varius feugiat nec et sapien. Praesent et euismod velit. Aliquam vehicula lorem vel sem commodo, eget vestibulum mi elementum. Donec suscipit elementum eros. Donec hendrerit ipsum eget facilisis egestas. Quisque sagittis venenatis sagittis. Nulla egestas, nulla eu egestas pulvinar, diam massa tincidunt ipsum, quis lacinia odio massa eget est. Mauris hendrerit odio vel erat ultricies, id tristique odio pretium."
   }
 }
