@@ -359,7 +359,7 @@
     background: #f0f0f0;
     border-radius: 12px;
     overflow: hidden;
-    border: 5px solid rgba(15, 23, 42, 0.06);
+    border: 2px solid var(--color-yellow);
     box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
   }
@@ -459,7 +459,7 @@
     background: #f0f0f0;
     border-radius: 14px;
     overflow: hidden;
-    border: 5px solid rgba(15, 23, 42, 0.08);
+    border: 2px solid var(--color-yellow);
     box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
   }
@@ -592,7 +592,7 @@
 @media (max-width: 900px) {
   .hero-inner {
     grid-template-columns: 1fr;
-    padding: 64px 20px;
+    padding: 20px 20px;
   }
 }
 
@@ -688,6 +688,31 @@
   background: var(--color-yellow);
   color: var(--color-blue);
   font-weight: 700;
+}
+
+.hero-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.hero-bullets li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 600;
+  color: var(--color-white);
+  font-size: 1.05rem;
+}
+
+.bullet-icon {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-yellow);
+  flex-shrink: 0;
 }
 
 /* ================= ABOUT ================= */
@@ -975,6 +1000,65 @@
     direction: ltr;
     padding: 1.75rem;
   }
+}
+
+.technology-slider {
+  margin-bottom: 1rem;
+}
+
+#technologyGlide {
+  position: relative;
+  height: clamp(260px, 45vw, 420px);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid var(--color-yellow);
+}
+
+#technologyGlide .glide__bullets {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+#technologyGlide .glide__bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease;
+}
+
+#technologyGlide .glide__bullet--active {
+  background: var(--color-yellow);
+  transform: scale(1.2);
+}
+
+#technologyGlide .glide__track {
+  height: 100%;
+}
+
+#technologyGlide .glide__slides {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+}
+
+#technologyGlide .glide__slide {
+  height: 100%;
+  display: flex;
+}
+
+#technologyGlide .glide__slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* technology hero*/

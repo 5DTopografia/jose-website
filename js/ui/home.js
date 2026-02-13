@@ -17,6 +17,12 @@ export function renderHome(lang = "es") {
       ctaProjects: "Ver proyectos",
       ctaServices: "Servicios",
 
+      bullets: [
+        "Levantamientos topográficos",
+        "BIM y digitalización 3D",
+        "Drones y georreferenciación"
+      ],
+
       cardTitle: "Respuesta rápida",
       cardText:
         "¿Tienes planos, mediciones o un proyecto en marcha? Escríbenos y te respondemos por email o teléfono.",
@@ -59,6 +65,12 @@ export function renderHome(lang = "es") {
       ctaProjects: "View projects",
       ctaServices: "Services",
 
+      bullets: [
+        "Topographic surveys",
+        "BIM & 3D digitization",
+        "Drones & georeferencing"
+      ],
+
       cardTitle: "Quick reply",
       cardText:
         "Have plans, measurements, or an ongoing project? Contact us and we’ll reply by email or phone.",
@@ -83,6 +95,7 @@ export function renderHome(lang = "es") {
       tpLink: "View projects →",
       partnersTitle: "Partners & Collaborators",
     },
+    
   };
 
   const t = copy[lang] || copy.es;
@@ -123,6 +136,21 @@ export function renderHome(lang = "es") {
   setText("homeTeaserProjectsText", t.tpText);
   setText("homeTeaserProjectsLink", t.tpLink);
   setText("homePartnersTitle", t.partnersTitle);
+
+  const bulletsContainer = document.getElementById("heroBullets");
+
+if (bulletsContainer) {
+  bulletsContainer.innerHTML = "";
+
+  t.bullets.forEach(text => {
+    const li = document.createElement("li");
+    li.innerHTML = `
+      <span class="bullet-icon"></span>
+      <span>${text}</span>
+    `;
+    bulletsContainer.appendChild(li);
+  });
+  } 
 }
 
 function setText(id, value) {

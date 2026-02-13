@@ -64,9 +64,9 @@ export async function loadTechnologySlider() {
 
     technologyGlideInstance = new Glide("#technologyGlide", {
       type: "carousel",
-      autoplay: 4000,
+      animationDuration: 1000,
+      autoplay: 4500,
       hoverpause: true,
-      animationDuration: 800,
       perView: 1
     });
 
