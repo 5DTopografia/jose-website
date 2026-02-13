@@ -67,7 +67,7 @@
 .projects-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 96px 32px; /* more horizontal air */
+  padding: 0 20px; /* more horizontal air */
 }
 
 @media (max-width: 768px) {
