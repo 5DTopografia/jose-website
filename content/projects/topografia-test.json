@@ -12,8 +12,8 @@
   "serviceType": "topografia",
   "visible": true,
   "title": {
-    "es": "ESTO ES UN TEST TOPOGRAFIA",
-    "en": "THIS IS A TOPOGRAPHY TEST"
+    "es": "TOPOGRAFIA - ESTO ES UN TEST ",
+    "en": "TOPOGRAPHY - THIS IS A  TEST"
   },
   "images": [
     "/assets/uploads/perfil.b-w.png",
