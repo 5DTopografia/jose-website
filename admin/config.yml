@@ -6,6 +6,11 @@ media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
 collections:
+
+  # ==========================================
+  # PROJECTS SETTINGS
+  # ==========================================
+
   - name: "projects"
     label: "Projects"
     folder: "content/projects"
@@ -78,8 +83,9 @@ collections:
         field:
           { label: "Image", name: "image", widget: "image" }
 
-
-          
+  # ==========================================
+  # TECHNOLOGY SLIDER SETTINGS
+  # ==========================================
 
   - name: "settings"
     label: "Settings"
@@ -97,3 +103,23 @@ collections:
               label: "Image"
               name: "image"
               widget: "image"
+
+  # ==========================================
+  # SERVICES SLIDER SETTINGS
+  # ==========================================
+
+  - name: "serviceSettings"
+  label: "Service Images"
+  files:
+    - label: "Services Images"
+      name: "servicesImages"
+      file: "content/settings/services-images.json"
+      format: "json"
+      fields:
+        - label: "Services"
+          name: "services"
+          widget: "list"
+          summary: "{{fields.id}}"
+          fields:
+            - { label: "Service ID", name: "id", widget: "string" }
+            - { label: "Image", name: "image", widget: "image" }

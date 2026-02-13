@@ -57,3 +57,24 @@ export function renderServices(lang = "es") {
     )
     .join("");
 }
+
+export async function loadServiceImagesFromCMS() {
+  try {
+    const res = await fetch("/.netlify/functions/services-settings");
+    if (!res.ok) return;
+
+    const data = await res.json();
+    const cmsServices = Array.isArray(data.services)
+      ? data.services
+      : [];
+
+    cmsServices.forEach((cmsItem) => {
+      const local = services.find((s) => s.id === cmsItem.id);
+      if (local && cmsItem.image) {
+        local.image = cmsItem.image;
+      }
+    });
+  } catch (err) {
+    console.error("Service image CMS load failed:", err);
+  }
+}

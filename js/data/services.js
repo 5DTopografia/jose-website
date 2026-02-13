@@ -31,7 +31,7 @@ export const services = [
         "Parcel discrepancies",
       ],
     },
-    image: "/assets/images/services/topografia.jpg",
+    image: "/assets/images/services/topografia.jpeg",
   },
 
   {
@@ -60,7 +60,7 @@ export const services = [
         "Applications in rehabilitation and as-built projects",
       ],
     },
-    image: "/assets/images/services/lidar.jpg",
+    image: "/assets/images/services/lidar.jpeg",
   },
 
   {
@@ -85,7 +85,7 @@ export const services = [
         "Georeferenced point clouds",
       ],
     },
-    image: "/assets/images/services/drones.jpg",
+    image: "/assets/images/services/drones.jpeg",
   },
 
   {

@@ -3,6 +3,7 @@ import { initFilters } from "./core/filters.js";
 import { initLanguage } from "./core/language.js";
 import { renderServices } from "./ui/services.js";
 import { initServiceInteractions } from "./ui/services-interactions.js";
+import { loadServiceImagesFromCMS } from "./ui/services.js";
 
 import { loadProjectsFromCMS } from "./data/projects-api.js";
 import { renderProjects } from "./ui/projects.js";
@@ -36,9 +37,10 @@ if (page === "home") {
 }
 
 if (page === "services") {
-  renderServices(lang);
-  initServiceInteractions();
-
+  loadServiceImagesFromCMS().then(() => {
+    renderServices(lang);
+    initServiceInteractions();
+  });
 }
 
 if (page === "contact") {
