@@ -89,7 +89,7 @@ export function openProjectModal(project, lang = "es") {
   
   function initModalClose() {
     const modal = document.getElementById("projectModal");
-    const closeBtn = document.getElementById("modalClose");
+    const closeBtn = modal.querySelector(".modal-close");
   
     if (!modal) return;
   

@@ -50,6 +50,7 @@ collections:
           - topografia
           - bim
           - drones
+          - lidar
           
       - label: "Instruments used"
         name: "instruments"
