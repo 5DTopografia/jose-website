@@ -80,15 +80,3 @@ document.querySelector(".modal-overlay")?.addEventListener("click", () => {
   document.getElementById("projectModal").classList.add("hidden");
 });
 
-function initTechnologyGlide() {
-  const slider = document.querySelector("#technologyGlide");
-  if (!slider) return;
-
-  new Glide(slider, {
-    type: "carousel",
-    autoplay: 4000,
-    animationDuration: 800,
-    perView: 1,
-    hoverpause: true
-  }).mount();
-}

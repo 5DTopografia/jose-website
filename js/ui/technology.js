@@ -22,30 +22,55 @@ export function renderTechnology(lang = "es") {
 }
 
 /* CMS SLIDER LOADER */
+let technologyGlideInstance = null;
+
 export async function loadTechnologySlider() {
   try {
     const res = await fetch("/.netlify/functions/settings");
-    const data = await res.json();
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
+    const data = await res.json();
+    const slides = Array.isArray(data.slides) ? data.slides : [];
+  
     const slidesContainer = document.getElementById("technologySlides");
+    const bulletsContainer = document.getElementById("technologyBullets");
     if (!slidesContainer) return;
 
     slidesContainer.innerHTML = "";
+    if (bulletsContainer) bulletsContainer.innerHTML = "";
 
-    (data.slides || []).forEach((slide) => {
+    // Inject slides (slide is a STRING path)
+    slides.forEach((src) => {
       const li = document.createElement("li");
       li.className = "glide__slide";
-      li.innerHTML = `<img src="${slide.image}" alt="">`;
+      li.innerHTML = `<img src="${src}" alt="">`;
       slidesContainer.appendChild(li);
     });
 
-    // IMPORTANT: mount AFTER injecting slides
-    new Glide("#technologyGlide", {
+    // Inject bullets
+    if (bulletsContainer) {
+      slides.forEach((_, i) => {
+        const b = document.createElement("button");
+        b.className = "glide__bullet";
+        b.setAttribute("data-glide-dir", `=${i}`);
+        bulletsContainer.appendChild(b);
+      });
+    }
+
+    if (technologyGlideInstance) {
+      technologyGlideInstance.destroy();
+      technologyGlideInstance = null;
+    }
+
+    technologyGlideInstance = new Glide("#technologyGlide", {
       type: "carousel",
       autoplay: 4000,
       hoverpause: true,
       animationDuration: 800,
-    }).mount();
+      perView: 1
+    });
+
+    technologyGlideInstance.mount();
 
   } catch (error) {
     console.error("Technology slider failed:", error);
