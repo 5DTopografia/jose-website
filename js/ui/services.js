@@ -60,7 +60,7 @@ export function renderServices(lang = "es") {
 
 export async function loadServiceImagesFromCMS() {
   try {
-    const res = await fetch("/.netlify/functions/services-settings");
+    const res = await fetch("/.netlify/functions/service-settings");
     if (!res.ok) return;
 
     const data = await res.json();
