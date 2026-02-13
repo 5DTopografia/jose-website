@@ -15,8 +15,8 @@
   "serviceType": "drones",
   "visible": true,
   "title": {
-    "es": "DRONES - test ",
-    "en": "DRONE - test"
+    "es": "DRONES ",
+    "en": "DRONE"
   },
   "videos": [
     "https://www.youtube.com/watch?v=BzmzqlUHms0",
@@ -24,7 +24,7 @@
   ],
   "internalTitle": "Drone test for projects",
   "description": {
-    "es": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at ipsum congue, tincidunt ligula non, blandit odio. Ut auctor vel nisl in gravida. Nunc dictum, tellus nec posuere lobortis, tellus ante malesuada sem, condimentum pharetra nisl sapien sed purus. Duis eu felis ex. Maecenas vestibulum libero a porta malesuada. Proin aliquam neque ac mauris lobortis congue. In ut quam quis orci varius feugiat nec et sapien. Praesent et euismod velit. Aliquam vehicula lorem vel sem commodo, eget vestibulum mi elementum. Donec suscipit elementum eros. Donec hendrerit ipsum eget facilisis egestas. Quisque sagittis venenatis sagittis. Nulla egestas, nulla eu egestas pulvinar, diam massa tincidunt ipsum, quis lacinia odio massa eget est. Mauris hendrerit odio vel erat ultricies, id tristique odio pretium.",
-    "en": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at ipsum congue, tincidunt ligula non, blandit odio. Ut auctor vel nisl in gravida. Nunc dictum, tellus nec posuere lobortis, tellus ante malesuada sem, condimentum pharetra nisl sapien sed purus. Duis eu felis ex. Maecenas vestibulum libero a porta malesuada. Proin aliquam neque ac mauris lobortis congue. In ut quam quis orci varius feugiat nec et sapien. Praesent et euismod velit. Aliquam vehicula lorem vel sem commodo, eget vestibulum mi elementum. Donec suscipit elementum eros. Donec hendrerit ipsum eget facilisis egestas. Quisque sagittis venenatis sagittis. Nulla egestas, nulla eu egestas pulvinar, diam massa tincidunt ipsum, quis lacinia odio massa eget est. Mauris hendrerit odio vel erat ultricies, id tristique odio pretium."
+    "es": "página en construcción",
+    "en": "Page under construction"
   }
 }
