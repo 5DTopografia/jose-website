@@ -9,6 +9,7 @@ Static website built with HTML, Tailwind CSS and Vanilla JS.
 - Decap CMS (admin lite)
 - Netlify hosting
 
+
 ## Content management
 Content is managed via `/admin` using Decap CMS.
 No backend or database is used.
