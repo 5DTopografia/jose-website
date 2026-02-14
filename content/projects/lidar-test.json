@@ -11,13 +11,13 @@
   "serviceType": "lidar",
   "visible": true,
   "title": {
-    "es": "LiDAR ",
-    "en": "LiDAR "
+    "es": "LiDAR & BIM",
+    "en": "LiDAR & BIM"
   },
   "videos": [
     "https://www.youtube.com/watch?v=K_wGtTSrTzU&pp=ygUVbGlkYXIgc2NhbiB0b3BvZ3JhZmlh"
   ],
-  "internalTitle": "LiDAR - test ",
+  "internalTitle": "LiDAR - test for BIM",
   "description": {
     "es": "página en construcción",
     "en": "Page under construction"
