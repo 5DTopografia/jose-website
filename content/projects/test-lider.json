@@ -1,8 +1,9 @@
 {
   "coverImage": "/assets/uploads/img_2250.jpeg",
   "galleryImages": [
-    "/assets/uploads/bim.jpg",
-    "/assets/uploads/drones.jpeg"
+    "/assets/uploads/ejemplo-1-escaneo-1.jpg",
+    "/assets/uploads/ejemplo-1-escaneo-3.jpg",
+    "/assets/uploads/ejemplo-1-escaneo-2.jpg"
   ],
   "instruments": [
     "lidar",
